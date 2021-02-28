@@ -1,0 +1,45 @@
+Tosdos com scrips abaixo:
+
+//Teste de Retorno Status da API
+pm.test("StatusComunicação API", function () {
+    pm.response.to.have.status(200);
+});
+
+//Teste Tempo de Resposta
+pm.test("Tempo de resposta aceitavel < 5000ms ", function () {
+    pm.expect(pm.response.responseTime).to.be.below(5000);
+});
+
+//Verificar retorno string body
+let jsonData = JSON.parse(responseBody);
+pm.test("Verify extenso", function () { 
+    pm.expect(jsonData.extenso).is.to.equal("dez"); 
+});
+
+
+SCRIPT PARA VALLIDAR SE O VALOR 10000 TRAZENDO UMA MENSAGEM QUE O STATUS ESPERADO É 400
+
+var teste = pm.variables.get("valor");
+
+if (teste == 10001)
+{
+pm.test("Valor não permitido para requisição, Status deve retornar 400", function () {
+    pm.response.to.have.status(400);
+});
+
+pm.test("Response time is less than 200ms", function () {
+    pm.expect(pm.response.responseTime).to.be.below(5000);
+});
+
+let jsonData = JSON.parse(responseBody);
+ pm.test("O valor retornado foi = Invalid data", function () { 
+        pm.expect(jsonData.extenso).is.to.equal("Invalid data"); 
+    });
+}
+else
+{
+    pm.test("Body is correct", function () {
+        pm.response.to.have.body("O Valor esperado no status code é 400");
+    });
+  
+}
