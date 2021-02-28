@@ -1,0 +1,442 @@
+{
+	"id": "e7569147-8135-4708-852d-16fcb4372a2d",
+	"name": "Desafio de QA_deliveryMuch",
+	"timestamp": "2021-02-28T21:56:57.205Z",
+	"collection_id": "67631280-91d4-4cae-9253-218c041ca3a3",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 29,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "02440d95-520e-428b-9131-32827e6b4d22",
+			"name": "CT001 - PT usando valor 10",
+			"url": "http://challengeqa.staging.devmuch.io//10",
+			"time": 584,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"StatusComunicação API": true,
+				"Tempo de resposta aceitavel < 5000ms ": true,
+				"Verify extenso": true
+			},
+			"testPassFailCounts": {
+				"StatusComunicação API": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta aceitavel < 5000ms ": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify extenso": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				584
+			],
+			"allTests": [
+				{
+					"StatusComunicação API": true,
+					"Tempo de resposta aceitavel < 5000ms ": true,
+					"Verify extenso": true
+				}
+			]
+		},
+		{
+			"id": "ec4d7093-6cfc-4ae3-8fd6-107392067f3d",
+			"name": "CT002 - PT usando valor limite -10000",
+			"url": "http://challengeqa.staging.devmuch.io//-10000",
+			"time": 542,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"StatusComunicação API": true,
+				"Tempo de resposta aceitavel < 5000ms ": true,
+				"Valor Body validado com sucesso": true
+			},
+			"testPassFailCounts": {
+				"StatusComunicação API": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta aceitavel < 5000ms ": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valor Body validado com sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				542
+			],
+			"allTests": [
+				{
+					"StatusComunicação API": true,
+					"Tempo de resposta aceitavel < 5000ms ": true,
+					"Valor Body validado com sucesso": true
+				}
+			]
+		},
+		{
+			"id": "1f6ef977-c676-4d2c-b6e5-82109426bc2b",
+			"name": "CT003 - PT usando valor limite -9999",
+			"url": "http://challengeqa.staging.devmuch.io//-9999",
+			"time": 509,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"StatusComunicação API": true,
+				"Tempo de resposta aceitavel < 5000ms ": true,
+				"Valor Body validado com sucesso": true
+			},
+			"testPassFailCounts": {
+				"StatusComunicação API": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta aceitavel < 5000ms ": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valor Body validado com sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				509
+			],
+			"allTests": [
+				{
+					"StatusComunicação API": true,
+					"Tempo de resposta aceitavel < 5000ms ": true,
+					"Valor Body validado com sucesso": true
+				}
+			]
+		},
+		{
+			"id": "91e02b08-194f-4f68-bb47-65609b286fa0",
+			"name": "CT004 - PT usando valor limite 10000",
+			"url": "http://challengeqa.staging.devmuch.io//10000",
+			"time": 512,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"StatusComunicação API": true,
+				"Tempo de resposta aceitavel < 5000ms ": true,
+				"Valor Body validado com sucesso": true
+			},
+			"testPassFailCounts": {
+				"StatusComunicação API": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta aceitavel < 5000ms ": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valor Body validado com sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				512
+			],
+			"allTests": [
+				{
+					"StatusComunicação API": true,
+					"Tempo de resposta aceitavel < 5000ms ": true,
+					"Valor Body validado com sucesso": true
+				}
+			]
+		},
+		{
+			"id": "7b6f78b1-cf5e-4ac8-bb7a-dd8570702159",
+			"name": "CT005 - PT usando valor limite 10001",
+			"url": "http://challengeqa.staging.devmuch.io//10001",
+			"time": 745,
+			"responseCode": {
+				"code": 400,
+				"name": "BAD REQUEST"
+			},
+			"tests": {
+				"Valor não permitido para requisição, Status deve retornar 400": true,
+				"Response time is less than 200ms": true,
+				"O valor retornado foi = Invalid data": true
+			},
+			"testPassFailCounts": {
+				"Valor não permitido para requisição, Status deve retornar 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"O valor retornado foi = Invalid data": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				745
+			],
+			"allTests": [
+				{
+					"Valor não permitido para requisição, Status deve retornar 400": true,
+					"Response time is less than 200ms": true,
+					"O valor retornado foi = Invalid data": true
+				}
+			]
+		},
+		{
+			"id": "0d475751-6438-487c-be8b-6728b8d6daa5",
+			"name": "CT001 - EN  usando valor 10",
+			"url": "http://challengeqa.staging.devmuch.io//en/10",
+			"time": 882,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"StatusComunicação API": true,
+				"Tempo de resposta aceitavel < 5000ms ": true,
+				"Verify extenso": true
+			},
+			"testPassFailCounts": {
+				"StatusComunicação API": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta aceitavel < 5000ms ": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify extenso": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				882
+			],
+			"allTests": [
+				{
+					"StatusComunicação API": true,
+					"Tempo de resposta aceitavel < 5000ms ": true,
+					"Verify extenso": true
+				}
+			]
+		},
+		{
+			"id": "d96f83e2-3e27-45e7-bd70-91ba78a05289",
+			"name": "CT002 - EN usando valor limite -10000",
+			"url": "http://challengeqa.staging.devmuch.io//en/-10000",
+			"time": 509,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"StatusComunicação API": true,
+				"Tempo de resposta aceitavel < 5000ms ": true
+			},
+			"testPassFailCounts": {
+				"StatusComunicação API": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta aceitavel < 5000ms ": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				509
+			],
+			"allTests": [
+				{
+					"StatusComunicação API": true,
+					"Tempo de resposta aceitavel < 5000ms ": true
+				}
+			]
+		},
+		{
+			"id": "b309fd50-9c4b-4052-a0ba-2b062b7d432c",
+			"name": "CT003 - EN usando valor limite -9999",
+			"url": "http://challengeqa.staging.devmuch.io//en/-9999",
+			"time": 512,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"StatusComunicação API": true,
+				"Tempo de resposta aceitavel < 5000ms ": true,
+				"Valor Body validado com sucesso": true
+			},
+			"testPassFailCounts": {
+				"StatusComunicação API": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta aceitavel < 5000ms ": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valor Body validado com sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				512
+			],
+			"allTests": [
+				{
+					"StatusComunicação API": true,
+					"Tempo de resposta aceitavel < 5000ms ": true,
+					"Valor Body validado com sucesso": true
+				}
+			]
+		},
+		{
+			"id": "174d8340-93e7-460b-b334-8f41ca0f5501",
+			"name": "CT004 - EN usando valor limite 10000",
+			"url": "http://challengeqa.staging.devmuch.io//en/10000",
+			"time": 870,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"StatusComunicação API": true,
+				"Tempo de resposta aceitavel < 5000ms ": true,
+				"Verify extenso": true
+			},
+			"testPassFailCounts": {
+				"StatusComunicação API": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta aceitavel < 5000ms ": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify extenso": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				870
+			],
+			"allTests": [
+				{
+					"StatusComunicação API": true,
+					"Tempo de resposta aceitavel < 5000ms ": true,
+					"Verify extenso": true
+				}
+			]
+		},
+		{
+			"id": "36cd217f-2228-4254-85f3-296379c8641a",
+			"name": "CT005 - PT usando valor limite 10001",
+			"url": "http://challengeqa.staging.devmuch.io//en/10001",
+			"time": 512,
+			"responseCode": {
+				"code": 401,
+				"name": "UNAUTHORIZED"
+			},
+			"tests": {
+				"Requisição não autorizada, retorno 401": true,
+				"Tempo de resposta aceitavel < 5000ms ": true,
+				"O valor retornado foi = Invalid data": true
+			},
+			"testPassFailCounts": {
+				"Requisição não autorizada, retorno 401": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta aceitavel < 5000ms ": {
+					"pass": 1,
+					"fail": 0
+				},
+				"O valor retornado foi = Invalid data": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				512
+			],
+			"allTests": [
+				{
+					"Requisição não autorizada, retorno 401": true,
+					"Tempo de resposta aceitavel < 5000ms ": true,
+					"O valor retornado foi = Invalid data": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 6177,
+	"collection": {
+		"requests": [
+			{
+				"id": "02440d95-520e-428b-9131-32827e6b4d22",
+				"method": "GET"
+			},
+			{
+				"id": "ec4d7093-6cfc-4ae3-8fd6-107392067f3d",
+				"method": "GET"
+			},
+			{
+				"id": "1f6ef977-c676-4d2c-b6e5-82109426bc2b",
+				"method": "GET"
+			},
+			{
+				"id": "91e02b08-194f-4f68-bb47-65609b286fa0",
+				"method": "GET"
+			},
+			{
+				"id": "7b6f78b1-cf5e-4ac8-bb7a-dd8570702159",
+				"method": "GET"
+			},
+			{
+				"id": "0d475751-6438-487c-be8b-6728b8d6daa5",
+				"method": "GET"
+			},
+			{
+				"id": "d96f83e2-3e27-45e7-bd70-91ba78a05289",
+				"method": "GET"
+			},
+			{
+				"id": "b309fd50-9c4b-4052-a0ba-2b062b7d432c",
+				"method": "GET"
+			},
+			{
+				"id": "174d8340-93e7-460b-b334-8f41ca0f5501",
+				"method": "GET"
+			},
+			{
+				"id": "36cd217f-2228-4254-85f3-296379c8641a",
+				"method": "GET"
+			}
+		]
+	}
+}

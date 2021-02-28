@@ -1,0 +1,495 @@
+{
+	"info": {
+		"_postman_id": "67631280-91d4-4cae-9253-218c041ca3a3",
+		"name": "Desafio de QA_deliveryMuch",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PT-BR",
+			"item": [
+				{
+					"name": "CT001 - PT usando valor 10",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//Teste de Retorno Status da API\r",
+									"pm.test(\"StatusComunicação API\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"//Teste Tempo de Resposta\r",
+									"pm.test(\"Tempo de resposta aceitavel < 5000ms \", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
+									"});\r",
+									"\r",
+									"//Verificar retorno string body\r",
+									"let jsonData = JSON.parse(responseBody);\r",
+									"pm.test(\"Verify extenso\", function () { \r",
+									"    pm.expect(jsonData.extenso).is.to.equal(\"dez\"); \r",
+									"});\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{LinkAmbiente}}/10",
+							"host": [
+								"{{LinkAmbiente}}"
+							],
+							"path": [
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CT002 - PT usando valor limite -10000",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//Teste de Retorno Status da API\r",
+									"pm.test(\"StatusComunicação API\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"//Teste Tempo de Resposta\r",
+									"pm.test(\"Tempo de resposta aceitavel < 5000ms \", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
+									"});\r",
+									"\r",
+									"//Verificar retorno string body\r",
+									"let jsonData = JSON.parse(responseBody);\r",
+									"pm.test(\"Valor Body validado com sucesso\", function () { \r",
+									"    pm.expect(jsonData.extenso).is.to.equal(\"menos dez mil\"); \r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{LinkAmbiente}}/-10000",
+							"host": [
+								"{{LinkAmbiente}}"
+							],
+							"path": [
+								"-10000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CT003 - PT usando valor limite -9999",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//Teste de Retorno Status da API\r",
+									"pm.test(\"StatusComunicação API\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"//Teste Tempo de Resposta\r",
+									"pm.test(\"Tempo de resposta aceitavel < 5000ms \", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
+									"});\r",
+									"\r",
+									"//Verificar retorno string body\r",
+									"let jsonData = JSON.parse(responseBody);\r",
+									"pm.test(\"Valor Body validado com sucesso\", function () { \r",
+									"    pm.expect(jsonData.extenso).is.to.equal(\"menos nove mil novecentos e noventa e nove\"); \r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{LinkAmbiente}}/-9999",
+							"host": [
+								"{{LinkAmbiente}}"
+							],
+							"path": [
+								"-9999"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CT004 - PT usando valor limite 10000",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//Teste de Retorno Status da API\r",
+									"pm.test(\"StatusComunicação API\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"//Teste Tempo de Resposta\r",
+									"pm.test(\"Tempo de resposta aceitavel < 5000ms \", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
+									"});\r",
+									"\r",
+									"//Verificar retorno string body\r",
+									"let jsonData = JSON.parse(responseBody);\r",
+									"pm.test(\"Valor Body validado com sucesso\", function () { \r",
+									"    pm.expect(jsonData.extenso).is.to.equal(\"ten thousand\"); \r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{LinkAmbiente}}/10000",
+							"host": [
+								"{{LinkAmbiente}}"
+							],
+							"path": [
+								"10000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CT005 - PT usando valor limite 10001",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"var teste = pm.variables.get(\"valor\");\r",
+									"\r",
+									"if (teste == 10001)\r",
+									"{\r",
+									"pm.test(\"Valor não permitido para requisição, Status deve retornar 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
+									"});\r",
+									"\r",
+									"let jsonData = JSON.parse(responseBody);\r",
+									" pm.test(\"O valor retornado foi = Invalid data\", function () { \r",
+									"        pm.expect(jsonData.extenso).is.to.equal(\"Invalid data\"); \r",
+									"    });\r",
+									"}\r",
+									"else\r",
+									"{\r",
+									"    pm.test(\"Body is correct\", function () {\r",
+									"        pm.response.to.have.body(\"O Valor esperado no status code é 400\");\r",
+									"    });\r",
+									"  \r",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.variables.set(\"valor\", \"10000\");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{LinkAmbiente}}/{{valor}}",
+							"host": [
+								"{{LinkAmbiente}}"
+							],
+							"path": [
+								"{{valor}}"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "EN",
+			"item": [
+				{
+					"name": "CT001 - EN  usando valor 10",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//Teste de Retorno Status da API\r",
+									"pm.test(\"StatusComunicação API\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"//Teste Tempo de Resposta\r",
+									"pm.test(\"Tempo de resposta aceitavel < 5000ms \", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
+									"});\r",
+									"\r",
+									"//Verificar retorno string body\r",
+									"let jsonData = JSON.parse(responseBody);\r",
+									"pm.test(\"Verify extenso\", function () { \r",
+									"    pm.expect(jsonData.full).is.to.equal(\"ten\"); \r",
+									"});\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{LinkAmbiente}}{{en}}/10",
+							"host": [
+								"{{LinkAmbiente}}{{en}}"
+							],
+							"path": [
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CT002 - EN usando valor limite -10000",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//Teste de Retorno Status da API\r",
+									"pm.test(\"StatusComunicação API\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"//Teste Tempo de Resposta\r",
+									"pm.test(\"Tempo de resposta aceitavel < 5000ms \", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
+									"});\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{LinkAmbiente}}{{en}}/-10000",
+							"host": [
+								"{{LinkAmbiente}}{{en}}"
+							],
+							"path": [
+								"-10000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CT003 - EN usando valor limite -9999",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//Teste de Retorno Status da API\r",
+									"pm.test(\"StatusComunicação API\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"//Teste Tempo de Resposta\r",
+									"pm.test(\"Tempo de resposta aceitavel < 5000ms \", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
+									"});\r",
+									"\r",
+									"//Verificar retorno string body\r",
+									"let jsonData = JSON.parse(responseBody);\r",
+									"pm.test(\"Valor Body validado com sucesso\", function () { \r",
+									"    pm.expect(jsonData.full).is.to.equal(\"minus nine thousand, nine hundred and ninety-nine\"); \r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{LinkAmbiente}}{{en}}/-9999",
+							"host": [
+								"{{LinkAmbiente}}{{en}}"
+							],
+							"path": [
+								"-9999"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CT004 - EN usando valor limite 10000",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//Teste de Retorno Status da API\r",
+									"pm.test(\"StatusComunicação API\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"//Teste Tempo de Resposta\r",
+									"pm.test(\"Tempo de resposta aceitavel < 5000ms \", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
+									"});\r",
+									"\r",
+									"//Verificar retorno string body\r",
+									"let jsonData = JSON.parse(responseBody);\r",
+									"pm.test(\"Verify extenso\", function () { \r",
+									"    pm.expect(jsonData.full).is.to.equal(\"ten thousand\"); \r",
+									"});\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{LinkAmbiente}}{{en}}/10000",
+							"host": [
+								"{{LinkAmbiente}}{{en}}"
+							],
+							"path": [
+								"10000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CT005 - PT usando valor limite 10001",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//Teste de Retorno Status da API\r",
+									"pm.test(\"Requisição não autorizada, retorno 401\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});\r",
+									" \r",
+									"\r",
+									"//Teste Tempo de Resposta\r",
+									"pm.test(\"Tempo de resposta aceitavel < 5000ms \", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
+									"});\r",
+									"\r",
+									"//Verificar retorno string body\r",
+									"let jsonData = JSON.parse(responseBody);\r",
+									"pm.test(\"O valor retornado foi = Invalid data\", function () { \r",
+									"    pm.expect(jsonData.full).is.to.equal(\"Invalid data\"); \r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{LinkAmbiente}}{{en}}/10001",
+							"host": [
+								"{{LinkAmbiente}}{{en}}"
+							],
+							"path": [
+								"10001"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
